@@ -2,7 +2,7 @@
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "info@herokuapp.com";
+    $email_to = "sssabrsh@gmail.com";
     $email_subject = "My Mail Setup";
  
     function died($error) {
