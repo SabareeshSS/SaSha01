@@ -17,14 +17,14 @@ Comments:	'.$_POST['comments'].'
     // Set up SMTP  
     $mail->IsSMTP();                // Sets up a SMTP connection  
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
-    $mail->SMTPSecure = "TLS";      // Connect using a TLS connection  
+    $mail->SMTPSecure = 'ssl';     // Connect using a TLS connection  
     $mail->Host = "smtp.gmail.com";  //Gmail SMTP server address
-    $mail->Port = 587;  //Gmail SMTP port Options: Port 25, 465, or 587
+    $mail->Port = 465;  //Gmail SMTP port Options: Port 25, 465, or 587
     $mail->Encoding = '7bit';
     
     // Authentication  
-    $mail->Username   = "sssabrsh@gmail.com"; // Your full Gmail address
-    $mail->Password   = "Sungard@23"; // Your Gmail password
+    $mail->Username   = "sawedssha@gmail.com"; // Your full Gmail address
+    $mail->Password   = "feb052018"; // Your Gmail password
       
     // Compose
     $mail->SetFrom($_POST['emailid'], $_POST['fullname']);
@@ -33,7 +33,7 @@ Comments:	'.$_POST['comments'].'
     $mail->MsgHTML($message);
  
     // Send To  
-    $mail->AddAddress("sabareesh2012@gmail.com", "Sabareesh"); // Where to send it - Recipient
+    $mail->AddAddress("sssabrsh@gmail.com", "Sabareesh"); // Where to send it - Recipient
     $result = $mail->Send();		// Send!  
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
