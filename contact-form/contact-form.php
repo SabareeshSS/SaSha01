@@ -1,7 +1,6 @@
 <?php
 if(isset($_POST['submit'])) 
 {
-
 $message=
 'Full Name:	'.$_POST['fullname'].'<br />
 Subject:	'.$_POST['subject'].'<br />
@@ -24,7 +23,7 @@ Comments:	'.$_POST['comments'].'
     
     // Authentication  
     $mail->Username   = "sawedssha@gmail.com"; // Your full Gmail address
-    $mail->Password   = "febx052018"; // Your Gmail password
+    $mail->Password   = "feb052018"; // Your Gmail password
       
     // Compose
     $mail->SetFrom($_POST['emailid'], $_POST['fullname']);
